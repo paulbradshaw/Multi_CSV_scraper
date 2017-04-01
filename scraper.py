@@ -13,23 +13,20 @@ record = {}
 
 idno = 0
 for row in reader:
-    record['Councillor'] = row[0]
-    record['Basic'] = row[1]
-    record['SRA'] = row[2]
-    record['Basic Arrs'] = row[3]
-    record['SRA Arrs'] = row[4]
-    record['Travel'] = row[5]
-
-    record['Dep Care'] = row[6]
-
-    record['Mileage'] = row[7].decode("latin-1")
-
+    record['ref'] = row[0]
+    record['organisation'] = row[1]
+    record['status'] = row[2]
+    record['start_date'] = row[3]
+    record['end_date'] = row[4]
+    record['revised_end'] = row[5]
+    record['directorate'] = row[6]
+    record['funding'] = row[7].decode("latin-1")
     idno += 1
     record['ID'] = idno
     print record
     scraperwiki.sqlite.save(['ID'], record)
 
-#After first (header) row, this will generate an error with this data:
+#This will generate an error with this data:
 #SqliteError: Binary strings must be utf-8 encoded
 
 #To see what happens next, go to: https://scraperwiki.com/scrapers/birminghamcouncilexpenditure_2nd/
