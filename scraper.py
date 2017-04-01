@@ -13,8 +13,9 @@ record = {}
 
 idno = 0
 for row in reader:
-    '''
     record['Councillor'] = row[0]
+    '''
+
     record['Basic'] = row[1]
     record['SRA'] = row[2]
     record['Basic Arrs'] = row[3]
