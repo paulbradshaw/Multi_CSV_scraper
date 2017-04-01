@@ -22,7 +22,7 @@ for row in reader:
 
     record['Dep Care'] = row[6]
 
-    record['Mileage'] = row[7]
+    record['Mileage'] = row[7].decode("latin-1")
 
     idno += 1
     record['ID'] = idno
