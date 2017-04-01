@@ -17,12 +17,13 @@ for row in reader:
     record['Basic'] = row[1]
     record['SRA'] = row[2]
     record['Basic Arrs'] = row[3]
+    record['SRA Arrs'] = row[4]
     '''
 
 
 
 
-    record['SRA Arrs'] = row[4]
+
     record['Travel'] = row[5]
     record['Dep Care'] = row[6]
     record['Mileage'] = row[7]
