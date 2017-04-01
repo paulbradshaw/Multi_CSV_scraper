@@ -3,7 +3,7 @@ import csv
 #guidance on csv library at https://scraperwiki.com/docs/python/python_csv_guide/
 
 #scrape the csv file into new variable 'data'
-data = scraperwiki.scrape('https://data.yorkopendata.org/dataset/4c7949fe-e8f1-49aa-85d8-05120264c998/resource/cc329a2a-7ebc-4d12-9827-2344f56732cf/download/membersallowances.csv')
+data = scraperwiki.scrape('https://data.birmingham.gov.uk/dataset/14492d37-1a77-4d46-9204-27363fc62149/resource/bacf38dd-3530-4c95-a0c3-83e21c9b2259/download/sgmsreportsvcsfreportsvcsfreports201415vcsfreport2014qtr1final.csv')
 
 #use .reader function and .splitlines() method to put 'data' into csv object 'reader'
 reader = csv.reader(data.splitlines())
