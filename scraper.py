@@ -11,6 +11,7 @@ print reader
 
 record = {}
 
+idno = 0
 for row in reader:
     record['Department'] = row[0]
     record['Entity'] = row[1]
@@ -20,8 +21,10 @@ for row in reader:
     record['Supplier/Institution'] = row[5]
     record['Transaction No'] = row[6]
     record['Value'] = row[7]
+    idno += 1
+    record['ID'] = idno
     print record
-    scraperwiki.sqlite.save(['Payment date'], record)
+    scraperwiki.sqlite.save(['ID'], record)
 
 #After first (header) row, this will generate an error with this data:
 #SqliteError: Binary strings must be utf-8 encoded
