@@ -20,7 +20,7 @@ for row in reader:
     record['end_date'] = row[4]
     record['revised_end'] = row[5]
     record['directorate'] = row[6]
-    record['funding'] = row[7].decode("latin-1")
+    record['funding'] = row[7] #.decode("latin-1")
     idno += 1
     record['ID'] = idno
     print record
