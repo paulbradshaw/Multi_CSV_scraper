@@ -21,9 +21,9 @@ for row in reader:
     record['Travel'] = row[5]
 
     record['Dep Care'] = row[6]
-    '''
+
     record['Mileage'] = row[7]
-    '''
+
     idno += 1
     record['ID'] = idno
     print record
