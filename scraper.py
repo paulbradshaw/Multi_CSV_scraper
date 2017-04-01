@@ -13,14 +13,14 @@ record = {}
 
 idno = 0
 for row in reader:
-    record['Councillor'] = row[0]
+'''    record['Councillor'] = row[0]
     record['Basic'] = row[1]
     record['SRA'] = row[2]
     record['Basic Arrs'] = row[3]
     record['SRA Arrs'] = row[4]
     record['Travel'] = row[5]
     record['Dep Care'] = row[6]
-    record['Mileage'] = row[7]
+    record['Mileage'] = row[7]'''
     idno += 1
     record['ID'] = idno
     print record
