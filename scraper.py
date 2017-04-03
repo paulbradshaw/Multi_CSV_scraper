@@ -25,7 +25,7 @@ def scrape_and_find_csv(url, idno):
                     print key
                     print value
                 row['id'] = idno
-                row['url'] = link
+                row['url'] = link.attrib.get('href')
                 scraperwiki.sqlite.save(['id'], row)
 
 scrape_and_find_csv(allcsvs, idno)
